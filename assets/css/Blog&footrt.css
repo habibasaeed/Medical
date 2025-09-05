@@ -1,0 +1,245 @@
+:root {
+  --brand: #2ea6f7;
+  --dark: #002261;
+  --text: #222222;
+  --bg: #ffffff;
+  --heading-color: #222;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+  --heading-font: "Poppins";
+  --body-font: "Rubik";
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Links & Lists */
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--brand);
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Section Titles */
+.section-title {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  color: var(--brand);
+  text-align: center;
+  display: inline-block;
+  letter-spacing: -1px;
+  position: relative;
+}
+.section-title::before,
+.section-title::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: var(--brand);
+  vertical-align: middle;
+}
+.section-title::before {
+  margin-right: 6px;
+}
+.section-title::after {
+  margin-left: 6px;
+}
+
+/* Section Title Wrapper */
+.section-title-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.section-title-wrapper::before,
+.section-title-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 12px;
+  background-color: var(--brand);
+}
+
+/* Blog Headings */
+.blog h4 {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* Carousel Slider Padding */
+.slider {
+  padding: 0 80px;
+}
+
+/* Card Image Wrapper */
+.slider-image {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* MEDICAL Overlay */
+.slider-image::before {
+  content: "MEDICAL";
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 4px 10px;
+  width: auto;
+  height: 30px;
+  background-color: #ffffff;
+  color: var(--brand);
+  border-radius: 25px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.slider-image::after {
+  content: "MAY  02";
+  position: absolute;
+  bottom: -2px;
+  right: 10px;
+  padding: 4px 4px;
+  width: 40px;
+  height: 40px;
+  background-color: #002261;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  box-shadow: 2px 0px 2px 0px inset;
+}
+
+/* Card Head (user & comment icons) */
+.slider .card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.slider .card-head .comment-icon {
+  margin-left: 5px;
+}
+
+/* Card Text */
+.slider .card-text {
+  color: gray;
+  margin-bottom: 10px;
+}
+.slider .card-body {
+}
+
+/* Carousel Indicators */
+.carousel-indicators [data-bs-target] {
+  background-color: grey;
+  width: 30px;
+  height: 5px;
+  margin: 0 5px;
+  border-radius: 10px;
+  margin-bottom: -30px;
+}
+.carousel-indicators .active {
+  background-color: var(--dark);
+  transform: scaleX(1.2);
+}
+.footer {
+  background-image: url("../images/footer_bg.jpg");
+  color: #fff;
+  margin-top: 150px;
+  padding: 0 60px;
+}
+.footer .footer-cols {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.special-col {
+  background-color: var(--brand);
+  position: relative;
+  padding: 40px;
+}
+.special-col::before {
+  width: 100%;
+  height: 50px;
+  left: 0;
+  top: -15px;
+  content: "";
+  position: absolute;
+  background-color: var(--brand);
+}
+.special-col img {
+  padding: 10px;
+}
+.footer i {
+  color: #ffffff;
+  margin-right: 3px;
+}
+.footer ul {
+  margin-top: 30px;
+}
+.footer li {
+  margin-bottom: 20px;
+}
+.social-media-icons {
+  margin-top: 15px;
+  margin-bottom: 10px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.social-media-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #2996df;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-media-icons a:hover {
+  background-color: var(--brand);
+  color: #fff;
+}

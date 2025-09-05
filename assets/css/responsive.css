@@ -1,0 +1,204 @@
+
+/* ================= Responsive Design ================= */
+
+/* للشاشات أقل من 992px (تابلت) */
+@media (max-width: 992px) {
+  .hero .container {
+    grid-template-columns: 1fr; 
+    text-align: center;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .container .about-all {
+    grid-template-columns: 1fr; 
+  }
+
+  .support-boxes {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container .counters {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* للشاشات أقل من 768px (موبايل متوسط) */
+@media (max-width: 768px) {
+  .top-nav .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info {
+    margin-bottom: 10px;
+  }
+
+  .container .app-search {
+    grid-template-columns: 1fr; 
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+
+  .about-text {
+    padding: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .container .counters {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+/* للشاشات أقل من 480px (موبايل صغير جدًا) */
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .hero-text .btu a {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+
+  .play-btn {
+    font-size: 0.6rem;
+    padding: 10px;
+  }
+
+  .support-boxes {
+    gap: 10px;
+  }
+
+  .counter h3 {
+    font-size: 22px;
+  }
+}
+
+
+
+
+/* ==================== Responsive ==================== */
+
+/* شاشات التابلت (1024px وأقل) */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .choose-us {
+    grid-template-columns: 1fr; /* تخليها عمود واحد */
+    text-align: center;
+  }
+
+  .choose-us .right-card-choose-us img {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio .container .portfolio-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .portfolio-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-card .portfolio-card-content img {
+    width: 90%;
+    height: auto;
+  }
+
+  .video {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .video .video-right-section .video-subtitle p {
+    width: 100%;
+  }
+}
+
+/* شاشات الموبايل (768px وأقل) */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .choose-us .container .left-card-choose-us .choose-us-content {
+    grid-template-columns: 1fr; /* الكروت تبقى تحت بعض */
+  }
+
+  .choose-us .container .left-card-choose-us .choose-us-content::before {
+    display: none; /* نخفي الخط العمودي */
+  }
+
+  .portfolio .container .portfolio-header .portfolio-header-right .portfolio-btns {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .portfolio-card .portfolio-card-content .portfolio-card-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .video .video-right-section .video-subtitle p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .shield-icon i {
+    font-size: 80px;
+  }
+}
+
+/* شاشات صغيرة جدًا (480px وأقل) */
+@media (max-width: 480px) {
+  .choose-us .container .left-card-choose-us .choose-us-subtitle h1,
+  .portfolio .container .portfolio-header .portfolio-header-left .portfolio-subtitle h1,
+  .video .video-right-section .video-subtitle h1 {
+    font-size: 24px;
+  }
+
+  .choose-us .container .left-card-choose-us .choose-us-content .choose-us-card .choose-us-card-content p {
+    width: auto; /* عشان النص يملى الشاشة */
+  }
+
+  .portfolio-card .portfolio-card-content img {
+    width: 100%;
+  }
+
+  .video .video-right-section .video-subtitle button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
