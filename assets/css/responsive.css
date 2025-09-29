@@ -1,0 +1,28 @@
+@media (max-width: 574px) {
+  .footer-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 576px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer .footer-cols {
+    margin-top: 60px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1399.98px) {
+}
