@@ -424,8 +424,8 @@ li {
 }
 
 /* Services Title */
-.services-title,
-.services-title-oneside {
+.two-sides-title,
+.title-oneside {
   font-family: var(--heading-font);
   font-weight: 600;
   color: var(--brand);
@@ -434,12 +434,12 @@ li {
   letter-spacing: -1px;
   position: relative;
 }
-.services-title-oneside {
+.title-oneside {
   text-align: start;
 }
-.services-title::before,
-.services-title::after,
-.services-title-oneside::before {
+.two-sides-title::before,
+.two-sides-title::after,
+.title-oneside::before {
   content: "";
   display: inline-block;
   width: 30px;
@@ -447,22 +447,22 @@ li {
   background: var(--brand);
   vertical-align: middle;
 }
-.services-title::before,
-.services-title-oneside::before {
+.two-sides-title::before,
+.title-oneside::before {
   margin-right: 6px;
 }
-.services-title::after {
+.two-sides-title::after {
   margin-left: 6px;
 }
 
-.services-title-wrapper,
-.services-title-wrapper-oneside {
+.two-sides-title-wrapper,
+.title-wrapper-oneside {
   position: relative;
   display: inline-block;
 }
-.services-title-wrapper::before,
-.services-title-wrapper::after,
-.services-title-wrapper-oneside::before {
+.title-wrapper::before,
+.title-wrapper::after,
+.title-wrapper-oneside::before {
   content: "";
   position: absolute;
   top: 40%;
@@ -471,7 +471,7 @@ li {
   height: 12px;
   background-color: var(--brand);
 }
-.services-title-wrapper-oneside::before {
+.title-wrapper-oneside::before {
   top: 50%;
 }
 
@@ -521,6 +521,7 @@ li {
   grid-template-columns: 3fr 1fr;
   background-color: aliceblue;
   margin-top: 80px;
+  padding: 30px 0 0 80px;
 }
 
 .choose-us .right-card-choose-us img {
@@ -931,8 +932,8 @@ li {
   letter-spacing: -1px;
   position: relative;
 }
-.blogs-title::before,
-.blogs-title::after {
+.two-sides-title::before,
+.two-sides-title::after {
   content: "";
   display: inline-block;
   width: 30px;
@@ -940,19 +941,19 @@ li {
   background: var(--brand);
   vertical-align: middle;
 }
-.blogs-title::before {
+.two-sides-title::before {
   margin-right: 6px;
 }
-.blogs-title::after {
+.two-sides-title::after {
   margin-left: 6px;
 }
 
-.blogs-title-wrapper {
+.two-sides-title-wrapper {
   position: relative;
   display: inline-block;
 }
-.blogs-title-wrapper::before,
-.blogs-title-wrapper::after {
+.two-sides-title-wrapper::before,
+.two-sides-title-wrapper::after {
   content: "";
   position: absolute;
   top: 40%;
