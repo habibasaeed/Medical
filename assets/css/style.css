@@ -39,7 +39,100 @@ li {
   list-style: none;
 }
 
-/* Section Titles */
+/* Section Title */
+.services-title,
+.services-title-oneside {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: var(--brand);
+  text-align: center;
+  display: inline-block;
+  letter-spacing: -1px;
+  position: relative;
+}
+.services-title-oneside {
+  text-align: start;
+}
+.services-title::before,
+.services-title::after,
+.services-title-oneside::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: var(--brand);
+  vertical-align: middle;
+}
+.services-title::before,
+.services-title-oneside::before {
+  margin-right: 6px;
+}
+.services-title::after {
+  margin-left: 6px;
+}
+
+.services-title-wrapper,
+.services-title-wrapper-oneside {
+  position: relative;
+  display: inline-block;
+}
+.services-title-wrapper::before,
+.services-title-wrapper::after,
+.services-title-wrapper-oneside::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  transform: translateY(-45%);
+  width: 3px;
+  height: 12px;
+  background-color: var(--brand);
+}
+.services-title-wrapper-oneside::before {
+  top: 50%;
+}
+
+/* Card Image Wrapper */
+.doctors-slider {
+  padding: 0 80px;
+}
+.doctors-slider img {
+  height: 250px;
+}
+.services {
+  background-color: aliceblue;
+}
+.service-card {
+  background: #fff;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.service-card i {
+  color: white;
+  background-color: #002261;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.service-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #002261;
+}
+.service-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Blog Titles */
 .blogs-title {
   font-family: var(--heading-font);
   font-weight: 500;
