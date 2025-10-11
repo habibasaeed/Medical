@@ -50,6 +50,7 @@
     object-fit: contain;
     margin: 0 auto;
   }
+  
 }
 
 /* Small devices  */
@@ -106,7 +107,54 @@
   .choose-us .choose-us-card .choose-us-icon {
     margin-bottom: 10px;
   }
+  /* Responsive  contact us and service offerings*/
+    
+      .contact-section {
+        flex-direction: column;
+      }
+      .contact-image {
+        height: 300px;
+      }
+      .advantages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+    }
+
+    .item1{
+        margin: 5px 0 -27px 0;
+    }
+    
+    .triangle{
+      display:none;
+    }
+
+    .items-wrap{
+      margin: 15px 0 395px;
+      flex-direction: column;
+    }
+    .items-wrap .photo  {
+  max-width: 100%;     
+  min-height: 420px;     
+    }
+    div.items-wrap {
+        height: 1014px;
+        margin-bottom: -119px;
+    }
+
+    .form-row{
+      flex-direction: column;
+    }
+
+    .contact-image img{
+      height: 320px;
+    }
+/* end contact-us and service offerings  */
 }
+
+
 
 @media (max-width: 575.98px) {
   .hero-text h1 {

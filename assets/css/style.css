@@ -1125,3 +1125,285 @@ li {
   color: #fff;
 }
 /*End footer*/
+
+/* start service offerings css  */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+div.service-offerings h3{
+    color: var(--brand);
+
+}
+div.service-offerings h1{
+    font-weight: 700;
+}
+
+div.service-offerings 
+{
+   margin-top: 50px;
+   text-align: center;
+
+}
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+    
+}
+
+.item {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;        
+    justify-content: space-evenly; 
+    background: #F2F7FB;
+}
+
+.icon i {
+    font-size: 28px;
+    color: #007bff;
+    transition: transform 0.3s, color 0.3s;
+    padding: 10px;
+}
+
+.icon i:hover {
+    transform: scale(1.2);
+    color: #ff6600;
+}
+
+.caption {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.item1 {
+    background-color: var(--dark); 
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    position: relative;
+    top: -30px;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+
+.item1::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid white;
+    border-top: 12px solid var(--dark); 
+}
+
+
+.item1 .icon {
+    background-color: var(--brand); 
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.item1 .icon::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: var(--brand);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.item1 .icon i {
+    font-size: 24px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.item1 .caption {
+    padding: 20px 15px;
+    z-index: 2;
+    position: relative;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-top: 21px solid var(--dark);
+    position: relative;
+    top: -60px;
+    left: 155px;
+}
+div.items-wrap {
+    display: flex;
+    justify-content: flex-start;
+    height: 468px;
+    border: 2px #F3F3F3 solid;
+    padding: 10px;
+    gap: 40px;
+    
+}
+.items-wrap .photo  {
+  max-width: 50%;     
+  min-height: 440px;     
+}
+.items-wrap .photo img {
+  max-width: 100%;     
+  min-height: 100%;    
+  border-radius: 10px; 
+}
+
+.items-wrap .discription h1{
+    font-size: 27px;
+}
+
+.items-wrap .discription p{
+    line-height: 28px;
+}
+.check-wrap{
+    display: flex;
+    gap: 10px;
+    
+}
+.check-wrap i{
+    font-size: 30px;
+}
+.check-wrap span {
+    line-height: 27px;
+}
+
+.read-more {
+    width: 202px;
+    height: 63px;
+    background: var(--brand);
+    position: relative;
+    color: white;
+    top: 36px;
+    border: none;
+    border-radius: 45px;
+    font-size: 17px;
+}
+button:hover {
+  cursor: pointer;      
+  background: var(--dark);   
+}
+
+
+/* end service offerings css*/
+
+
+
+/* contact section css  */
+
+
+
+.contact-section {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Left Side */
+    .contact-form {
+      flex: 1;
+      background: #f4f7fb;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-form h5 {
+      color: var(--brand);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .contact-form h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #222;
+      line-height: 1.4;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .form-row input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: none;
+    }
+
+    .contact-form button {
+    background: var(--brand);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 49px;
+    transition: 0.3s;
+    width: 182px;
+    height: 56px;
+}
+
+    .contact-form button:hover {
+      background: var(--dark);
+    }
+
+    
+.contact-image img {
+  flex: 1;
+  background: url("../images/doctorPatient.jpg") center center / cover no-repeat;
+  height: 600px;
+  width: 571px;
+}
+
+/*end contact us */
+    
+    
+
+    
