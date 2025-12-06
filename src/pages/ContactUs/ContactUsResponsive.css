@@ -1,0 +1,66 @@
+@media (max-width: 574px){
+
+.teeth {
+    left: 213px;
+}
+.right-side {
+    padding-top: 50px;
+}
+.contactus-form input {
+    width: 301px;
+}
+input.code {
+    width: 143px;
+}
+.contactus-form textarea{
+    width: 19rem;
+}
+}
+
+@media (min-width: 575px) and (max-width: 991.98px){
+
+.teeth {
+    position: absolute;
+    left: 63px;
+    /* top: 41rem; */
+}
+.right-side {
+    padding-top: 50px;
+}
+.contactus-form {
+    justify-content: center;
+}
+
+.contactus-form input{
+    width: 229px;
+}
+.form-btns {
+    align-items: center;
+}
+
+input.type-input {
+    height: fit-content;
+    width: 492px;
+}
+
+.contactus-form textarea{
+    width: 31rem;
+}
+}
+
+@media (min-width:992px) and (max-width: 1199.98px) {
+.teeth {
+    left: 20px;
+}
+
+.contactus-form input {
+    width: 239px;
+}
+input.type-input {
+    height: fit-content;
+    width: 519px;
+}
+input.code {
+    width: 114px;
+}
+}

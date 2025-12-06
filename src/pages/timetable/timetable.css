@@ -1,0 +1,200 @@
+:root {
+  --brand: #2ea6f7;
+  --dark: #002261;
+  --text: #222222;
+  --bg: #ffffff;
+  --heading-color: #222;
+  --shadow: 0 10px 25px rgba(0, 0, 0, .06);
+  --radius: 14px;
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Rubik", sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Page header */
+.page {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-header {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-header .small-label {
+  position: relative;
+  display: inline-block;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  font-family: var(--body-font);
+}
+
+/* left and right thin blue lines */
+.page-header .small-label::before,
+.page-header .small-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5px;
+  background: var(--brand);
+  border-radius: 2px;
+  width: 60px;
+  opacity: 1;
+}
+
+/* left line */
+.page-header .small-label::before {
+  left: -60px;
+
+}
+
+/* right line */
+.page-header .small-label::after {
+  right: -60px;
+}
+
+
+/* Main title */
+.title {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-size: 26px;
+  margin-bottom: 28px;
+  line-height: 1.1;
+}
+
+/* Timetable wrapper */
+.timetable-wrapper {
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 20px;
+  overflow: auto;
+}
+
+/* Grid: 8 columns (time + 7 days) */
+.timetable-grid {
+  display: grid;
+  grid-template-columns: 200px repeat(7, 1fr);
+  gap: 0;
+  border: 1px solid #e6e6e6;
+  min-width: 1100px;
+}
+
+.cell {
+  border-left: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 22px 18px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* header cells */
+.cell.head {
+  background: var(--bg);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: var(--dark);
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+/* Cell hover: dark background and white text */
+.cell:not(.head):hover {
+  background: var(--dark);
+  color:var(--bg);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.cell:not(.head):hover .event {
+  background: transparent;
+}
+
+/* Make sure all text inside the hovered cell is white */
+.cell:not(.head):hover .event-title,
+.cell:not(.head):hover .event-meta,
+.cell:not(.head):hover h4,
+.cell:not(.head):hover span,
+.cell:not(.head):hover p,
+.cell:not(.head):hover a {
+  color:var(--bg) !important;
+}
+
+/* If some meta text used --brand color, override it on hover */
+.cell:not(.head):hover .event-meta {
+  color: var(--bg) !important;
+  opacity: 0.95;
+}
+
+
+/* time column header tweaks */
+.time-head {
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* time column cells */
+.time-cell {
+  font-weight: 700;
+  color: var(--dark);
+  justify-content: center;
+}
+
+/* events box */
+.event {
+  background: var(--bg);
+  padding: 10px 12px;
+  border-radius: 6px;
+  max-width: 180px;
+  box-shadow: none;
+}
+
+.event.small {
+  max-width: 140px;
+  padding: 8px 10px;
+}
+
+.event-title {
+  font-weight: 900;
+  color: var(--dark);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.event-meta {
+  font-size: 13px;
+  color: var(--brand);
+  line-height: 1.2;
+}
+

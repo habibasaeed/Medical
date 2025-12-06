@@ -1,0 +1,120 @@
+:root {
+  --brand: #2ea6f7;
+  --dark: #002261;
+  --text: #222222;
+  --bg: #ffffff;
+  --primary-color: #002261;
+  --title-color: #2ea3f3;
+  --heading-color: #222;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+  --heading-font: "Poppins";
+  --body-font: "Rubik";
+}
+
+.profile-container {
+  max-width: 700px;
+}
+
+.profile-wrapper {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-wrapper li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.edit-btn,
+.logout-btn {
+  background-color: var(--main-color);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #2ea3f3;
+  color: white;
+}
+
+.logout-btn {
+  background: #002261;
+  color: white;
+}
+.edit-btn:hover {
+}
+.logout-btn:hover {
+  background-color: #2ea3f3;
+}
+
+.visit-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  border-left: 5px solid #007bff;
+}
+
+.visit-card.past {
+  opacity: 0.8;
+  border-left-color: #6c757d;
+}
+
+.section h3 {
+  font-weight: bold;
+}
+
+.section {
+  margin-top: 40px;
+}
+.prescription-list {
+  margin-top: 20px;
+}
+
+.prescription-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+.prescription-card h5 {
+  font-weight: bold;
+}
+
+.prescription-card a {
+  margin-top: 10px;
+  display: inline-block;
+}
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.status-pending {
+  color: white;
+  background-color: #856404;
+}
+
+.status-approved {
+  background-color: #155724;
+  color: white;
+}
+
+.status-rejected {
+  background: white;
+  background-color: #721c24;
+}

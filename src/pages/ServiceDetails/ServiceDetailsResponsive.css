@@ -1,0 +1,103 @@
+@media (max-width: 574px){
+/* start all service */
+    .all-service .row {
+        gap: 45px;
+    }
+/* end all service */
+
+/* start service details items  */
+
+.service-details-items .cards-wrapper {
+    flex-wrap: wrap;
+    gap: 27px
+}
+.service-details-items .container .row{
+    flex-direction: column;
+    gap:27px;
+}
+
+.service-details-items .container .service-details-item-card{
+  width: 100%;
+}
+.service-details-items .container .cards-header {
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 26px;
+}
+/* end service details items  */
+
+/* start service numbers */
+.service-numbers .service-numbers-cards {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+.service-numbers .service-numbers-cards .card {
+    width: 100% !important;
+}
+/* end service numbers */
+}
+
+@media (max-width: 991.98px){
+/* start all service */
+    .all-service .row {
+        gap: 33px;
+    }
+
+    .all-service-btns {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .all-service .col-sm-4 {
+        width: 100% !important;
+    }
+
+    .all-service .col-sm-8 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+/* end all service */
+
+/* start service details items  */
+
+.service-details-items .cards-wrapper {
+    gap: 27px
+}
+.service-details-items .container .row{
+    flex-direction: column;
+    gap:27px;
+}
+
+.service-details-items .container .service-details-item-card{
+  width: 100%;
+}
+.service-details-items .container .cards-header {
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 26px;
+}
+
+.service-details-items .service-items-image{
+    display: contents;
+}
+/* end service details items  */
+
+/* start service numbers */
+.service-numbers .service-numbers-cards {
+        flex-wrap: wrap;
+        gap: 32px;
+}
+
+
+
+
+.service-numbers .service-numbers-cards .card {
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* end service numbers */
+
+}
+

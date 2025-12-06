@@ -1,0 +1,86 @@
+:root {
+  --brand: #2ea6f7;
+  --dark: #002261;
+  --text: #222222;
+  --bg: #ffffff;
+  --primary-color: #002261;
+  --title-color: #2ea3f3;
+  --heading-color: #222;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --radius: 14px;
+  --heading-font: "Poppins";
+  --body-font: "Rubik";
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text);
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bread-crumb {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-image: url(../../assets/images/page_heading_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.bread-crumb p {
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: 48px;
+}
+.bread-crumb ul {
+  display: flex;
+  color: #222;
+}
+.bread-crumb a {
+  text-decoration: none;
+  color: rgb(132, 132, 132);
+}
+.bread-crumb ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.bread-crumb .active {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .bread-crumb p {
+    font-size: 39px;
+  }
+}
+@media (max-width: 575px) {
+  .bread-crumb p {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,65 @@
+.doctor-dashboard {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.muted {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app-card h4 {
+  font-size: 20px;
+}
+
+.app-card .small {
+  color: #666;
+  font-size: 14px;
+}
+
+.time {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-box textarea {
+  min-height: 60px;
+  resize: none;
+}
+
+.btn-upload {
+  background: var(--brand);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-upload:hover {
+  opacity: 0.9;
+}

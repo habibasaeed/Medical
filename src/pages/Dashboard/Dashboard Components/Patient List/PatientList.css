@@ -1,0 +1,60 @@
+.patients-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.patients-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.patients-table th {
+  background: #f7f9fc;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.patients-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.patients-table tr:hover {
+  background: #fafafa;
+}
+
+.delete-btn {
+  background: #e63946;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c1121f;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 25px;
+  color: #888;
+  font-style: italic;
+}
