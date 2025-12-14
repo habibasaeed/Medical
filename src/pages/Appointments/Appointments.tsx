@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 import "../../assets/css/style.css";
 import "./Appointments.css";
+import { toast } from "react-toastify";
 
 interface Doctor {
   _id: string;
@@ -28,7 +29,7 @@ const Appointments: React.FC = () => {
       .then((data) => {
         setDoctors(data || []);
         const uniqueSpecs = [
-          ...new Set(data.map((d: Doctor) => d.specialization)),
+          ...new Set<string>(data.map((d: Doctor) => d.specialization)),
         ];
         setCategories(uniqueSpecs);
       })
@@ -43,9 +44,9 @@ const Appointments: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!token) return alert("Please login first");
-    if (!selectedCategory) return alert("Choose a category");
-    if (!doctorId) return alert("Choose a doctor");
+    if (!token) return toast.error("Please login first");
+    if (!selectedCategory) return toast.error("Choose a category");
+    if (!doctorId) return toast.error("Choose a doctor");
 
     const response = await fetch(
       "http://localhost:5000/api/appointments/create",
@@ -61,9 +62,10 @@ const Appointments: React.FC = () => {
 
     const data = await response.json();
 
-    if (!response.ok) return alert(data.message || "Something went wrong");
+    if (!response.ok)
+      return toast.error(data.message || "Something went wrong");
 
-    alert("Appointment booked!");
+    toast.success("Appointment booked!");
 
     // Reset form
     setSelectedCategory("");
@@ -71,10 +73,10 @@ const Appointments: React.FC = () => {
     setDate("");
     setTime("");
 
-    // Avoid profile crash by redirecting home or profile safely
+    // Redirect safely
     setTimeout(() => {
       window.location.href = "/user/profile";
-    }, 500);
+    }, 700);
   };
 
   return (

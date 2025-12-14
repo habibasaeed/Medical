@@ -18,9 +18,10 @@ import AuthHandler from "./AuthHandler";
 import DoctorDashboard from "./pages/Dashboard/Doctor Dashboard/DoctorDashboard";
 import AdminAppointments from "./pages/Dashboard/Dashboard Components/Appointment/AdminAppointments";
 import ContactUs from "./pages/ContactUs/ContactUs";
-
+import ScrollToTop from "./components/ScrollPageUp";
 import { useEffect, useState } from "react";
 import ScrollToTopButton from "./components/ScrollUp/ScrollToTop";
+import { ToastContainer } from "react-toastify";
 function App() {
   const location = useLocation();
   const [authChanged, setAuthChanged] = useState(0);
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       {!location.pathname.toLowerCase().includes("login") && <Navbar />}
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home key={authChanged} />} />
@@ -56,7 +58,7 @@ function App() {
         <Route path="/admin/appointments" element={<AdminAppointments />} />
       </Routes>
       <ScrollToTopButton />
-
+      <ToastContainer />
       {!location.pathname.toLowerCase().includes("login") && <Footer />}
     </>
   );

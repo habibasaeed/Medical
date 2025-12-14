@@ -7,7 +7,7 @@ import Portfolio from "../../components/Portfolio";
 import BlogSlider from "../../components/Slider/BlogSlider";
 import "../../assets/css/fonts.css";
 import TeamSlider from "../../components/Slider/TeamSlider";
-
+import { Link } from "react-router-dom";
 function App() {
   return (
     <>
@@ -30,9 +30,12 @@ function App() {
                 <p>Call Us at: (+2) 56 54 1453</p>
               </div>
               <div className="btu">
-                <a href="#" className="btn rounded-pill main-btn">
+                <Link
+                  to="/service-details"
+                  className="btn rounded-pill main-btn"
+                >
                   Our Services<i className="fa-solid fa-angles-right"></i>
-                </a>
+                </Link>
                 <a href="#" className="btn rounded-pill main-btn">
                   Learn More<i className="fa-solid fa-angles-right"></i>
                 </a>
@@ -109,9 +112,9 @@ function App() {
                 </div>
               </div>
               <div className="btn-about ">
-                <a href="#" className="btn rounded-pill main-btn">
+                <Link to="/about-section" className="btn rounded-pill main-btn">
                   About More <i className="fa-solid fa-angles-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

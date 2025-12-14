@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Login.css";
 import "./LoginResponsive.css";
+import { toast } from "react-toastify";
 
 interface FormData {
   username: string;
@@ -43,7 +44,6 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (action === "Login") {
       try {
         const response = await fetch("http://localhost:5000/api/auth/login", {
@@ -58,25 +58,30 @@ const Login: React.FC = () => {
         const data = await response.json();
 
         if (!response.ok) {
-          alert(data.message || "Login failed");
+          toast.error(data.message || "Login failed");
           return;
         }
 
-        // save user + token
+        if (data.message && data.message.toLowerCase().includes("invalid")) {
+          toast.error(data.message);
+          return;
+        }
+
+        // Save token + user
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
 
-        alert("Login successful!");
+        toast.success("Login successful!");
         window.location.href = "/auth";
       } catch (error) {
         console.error("Login error:", error);
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       }
     }
 
     if (action === "Sign Up") {
       if (formData.password !== formData.confirmPassword) {
-        alert("Passwords do not match");
+        toast.error("Passwords do not match");
         return;
       }
 
@@ -99,15 +104,15 @@ const Login: React.FC = () => {
         const data = await response.json();
 
         if (!response.ok) {
-          alert(data.message || "Signup failed");
+          toast.error(data.message || "Signup failed");
           return;
         }
 
-        alert("Account created! Please login.");
+        toast.error("Account created! Please login.");
         setAction("Login");
       } catch (error) {
         console.error("Signup error:", error);
-        alert("Something went wrong");
+        toast.error("Something went wrong");
       }
     }
   };
